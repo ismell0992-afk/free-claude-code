@@ -101,3 +101,21 @@ Example commit on `main` after a packaging fix: bump `1.2.38` → `1.2.39`, run 
 ## TOOLS
 
 - Prefer built-in tools (grep, read_file, etc.) over manual workflows. Check tool availability before use.
+
+## Local Ollama (Claude Code via FCC)
+
+This repo is the FCC proxy; `fcc-claude` runs the real Claude Code against a
+local/remote Ollama. Helper scripts + slash commands make connecting one-shot:
+
+- `/run-local` — connect to this Mac's Ollama (`127.0.0.1:11434`), start `fcc-server`, launch `fcc-claude`. Auto-starts `ollama serve` if needed.
+- `/run-windows` — discover the Windows PC over Tailscale, connect, start `fcc-server`, launch `fcc-claude`.
+- `/run` — reuse the last target (`--last`); falls back to Windows.
+- `/connect-local` / `/connect-windows` / `/connect` — same as above but only update opencode's model list + `.env` (no `fcc-claude` launch); pick the model with opencode's `/model`.
+- `/stop-fcc` — stop the background `fcc-server` (`pkill -f fcc-server`).
+- `/fcc-status` — print `OLLAMA_BASE_URL`, proxy health, and whether each `MODEL*` exists on the target.
+
+Underlying scripts: `scripts/connect_ollama.py`, `scripts/run_claude_ollama.py`,
+`scripts/fcc_status.py`. All accept `--opus/--sonnet/--haiku/--model` to pin
+tiers, `--profile/--save/--last` for named connection profiles, and `--filter`
+to narrow the model list. On a 16GB Mac, Opus is capped at ~14B-class; `-cloud`
+models are treated as remote API endpoints, not local compute.

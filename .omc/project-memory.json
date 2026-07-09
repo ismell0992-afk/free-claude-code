@@ -1,0 +1,234 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1783516360317,
+  "projectRoot": "/Users/kylejones/Documents/GitHub/free-claude-code",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "pyproject.toml"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "fastapi",
+        "version": null,
+        "category": "backend"
+      },
+      {
+        "name": "pytest",
+        "version": null,
+        "category": "testing"
+      }
+    ],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": "pytest",
+    "lintCommand": "ruff check",
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets",
+      "scripts",
+      "tests"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "api": {
+      "path": "api",
+      "purpose": "API routes",
+      "fileCount": 18,
+      "lastAccessed": 1783516359974,
+      "keyFiles": [
+        "__init__.py",
+        "admin_routes.py",
+        "admin_urls.py",
+        "app.py",
+        "command_utils.py"
+      ]
+    },
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 8,
+      "lastAccessed": 1783516359988,
+      "keyFiles": [
+        "admin-messaging.png",
+        "admin-page.png",
+        "cc-model-picker.png",
+        "codex-model-picker.png",
+        "codex.png"
+      ]
+    },
+    "cli": {
+      "path": "cli",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1783516359999,
+      "keyFiles": [
+        "__init__.py",
+        "claude_env.py",
+        "entrypoints.py",
+        "process_registry.py"
+      ]
+    },
+    "config": {
+      "path": "config",
+      "purpose": "Configuration files",
+      "fileCount": 12,
+      "lastAccessed": 1783516360026,
+      "keyFiles": [
+        "__init__.py",
+        "constants.py",
+        "env_files.py",
+        "env_migrations.py",
+        "env_template.py"
+      ]
+    },
+    "core": {
+      "path": "core",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1783516360090,
+      "keyFiles": [
+        "__init__.py",
+        "rate_limit.py",
+        "trace.py"
+      ]
+    },
+    "messaging": {
+      "path": "messaging",
+      "purpose": null,
+      "fileCount": 17,
+      "lastAccessed": 1783516360113,
+      "keyFiles": [
+        "__init__.py",
+        "cli_event_constants.py",
+        "command_context.py",
+        "command_dispatcher.py",
+        "commands.py"
+      ]
+    },
+    "providers": {
+      "path": "providers",
+      "purpose": null,
+      "fileCount": 7,
+      "lastAccessed": 1783516360147,
+      "keyFiles": [
+        "__init__.py",
+        "base.py",
+        "defaults.py",
+        "error_mapping.py",
+        "exceptions.py"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 6,
+      "lastAccessed": 1783516360171,
+      "keyFiles": [
+        "ci.ps1",
+        "ci.sh",
+        "install.ps1",
+        "install.sh",
+        "uninstall.ps1"
+      ]
+    },
+    "smoke": {
+      "path": "smoke",
+      "purpose": null,
+      "fileCount": 5,
+      "lastAccessed": 1783516360179,
+      "keyFiles": [
+        "README.md",
+        "__init__.py",
+        "capabilities.py",
+        "conftest.py",
+        "features.py"
+      ]
+    },
+    "tests": {
+      "path": "tests",
+      "purpose": "Test files",
+      "fileCount": 4,
+      "lastAccessed": 1783516360181,
+      "keyFiles": [
+        "__init__.py",
+        "conftest.py",
+        "provider_request_mocks.py",
+        "stream_contract.py"
+      ]
+    },
+    "smoke/lib": {
+      "path": "smoke/lib",
+      "purpose": "Library code",
+      "fileCount": 11,
+      "lastAccessed": 1783516360278,
+      "keyFiles": [
+        "__init__.py",
+        "child_process.py",
+        "claude_cli_matrix.py"
+      ]
+    },
+    "tests/api": {
+      "path": "tests/api",
+      "purpose": "API routes",
+      "fileCount": 21,
+      "lastAccessed": 1783516360295,
+      "keyFiles": [
+        "test_admin.py",
+        "test_anthropic_request_passthrough.py",
+        "test_api.py"
+      ]
+    },
+    "tests/config": {
+      "path": "tests/config",
+      "purpose": "Configuration files",
+      "fileCount": 3,
+      "lastAccessed": 1783516360317,
+      "keyFiles": [
+        "test_config.py",
+        "test_env_migrations.py",
+        "test_logging_config.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": ".env.example",
+      "accessCount": 2,
+      "lastAccessed": 1783516539422,
+      "type": "file"
+    },
+    {
+      "path": ".env",
+      "accessCount": 1,
+      "lastAccessed": 1783516641426,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
